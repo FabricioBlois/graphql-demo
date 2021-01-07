@@ -1,0 +1,15 @@
+{
+    beer(id: 1) {
+        id
+        type
+        brand {
+            id
+            name
+        }
+        messages {
+            id
+            beerId
+            value
+        }
+    }
+}
