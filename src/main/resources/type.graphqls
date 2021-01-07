@@ -1,0 +1,17 @@
+type Beer {
+    id: Int!
+    type: String!
+    brand: Brand!
+    messages: [Message]
+}
+
+type Brand {
+    id: Int!
+    name: String!
+}
+
+type Message {
+    id: Int!
+    beerId: Int!
+    value: String!
+}
