@@ -11,8 +11,8 @@
     <groupId>com.example</groupId>
     <artifactId>graphql-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
+    <name>graphql-demo</name>
+    <description>GraphQL Demo project for Spring Boot</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
