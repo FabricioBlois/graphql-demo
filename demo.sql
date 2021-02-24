@@ -1,37 +1,32 @@
 -- Tables
-create table brand
-(
-    id   int not null primary key,
-    name text
+CREATE TABLE brand (
+    id   INT NOT NULL PRIMARY KEY,
+    name TEXT
 );
 
-create table beer
-(
-    id       int not null primary key,
-    brand_id int not null
-        constraint fk_beer_brand references brand,
-    type     text
+CREATE TABLE beer (
+    id       INT NOT NULL PRIMARY KEY,
+    brand_id INT NOT NULL CONSTRAINT fk_beer_brand REFERENCES brand,
+    type     TEXT
 );
 
-create table message
-(
-    id      int not null primary key,
-    beer_id int not null
-        constraint fk_message_beer references beer,
-    value   text
+CREATE TABLE message (
+    id      INT NOT NULL PRIMARY KEY,
+    beer_id INT NOT NULL CONSTRAINT fk_message_beer REFERENCES beer,
+    value   TEXT
 );
 
 -- Init insert
-insert into brand (id, name)
-values (1, 'Brewdog'),
+INSERT INTO brand (id, name)
+VALUES (1, 'Brewdog'),
        (2, 'Paulaner');
 
-insert into beer (id, brand_id, type)
-values (1, 1, 'IPA'),
+INSERT INTO beer (id, brand_id, type)
+VALUES (1, 1, 'IPA'),
        (2, 2, 'Weizenbier');
 
-insert into message (id, beer_id, value)
-values (1, 1, 'Nice beer'),
+INSERT INTO  message (id, beer_id, value)
+VALUES (1, 1, 'Nice beer'),
        (2, 2, 'Good beer'),
        (3, 1, 'Bitter beer'),
        (4, 2, 'Heavy beer');
