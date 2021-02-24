@@ -12,6 +12,5 @@ type Brand {
 
 type Message {
     id: Int!
-    beerId: Int!
     value: String!
 }
