@@ -20,7 +20,6 @@
         <java.version>11</java.version>
         <graphql-spring-boot-starter.version>8.0.0</graphql-spring-boot-starter.version>
         <graphql-java-tools.version>6.2.0</graphql-java-tools.version>
-        <orika-core.version>1.5.4</orika-core.version>
         <hibernate-validator.version>6.1.6.Final</hibernate-validator.version>
     </properties>
 
@@ -64,12 +63,6 @@
 <!--            <artifactId>graphql-java-tools</artifactId>-->
 <!--            <version>${graphql-java-tools.version}</version>-->
 <!--        </dependency>-->
-
-        <dependency>
-            <groupId>ma.glasnost.orika</groupId>
-            <artifactId>orika-core</artifactId>
-            <version>${orika-core.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

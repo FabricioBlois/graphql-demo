@@ -16,9 +16,6 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "beer_id")
-    private Integer beerId;
-
     @Column(name = "value")
     private String value;
 

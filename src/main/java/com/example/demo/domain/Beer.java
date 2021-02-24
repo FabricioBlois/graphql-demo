@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -19,10 +20,15 @@ public class Beer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "brand_id")
-    private Integer brandId;
+    @ManyToOne(targetEntity = Brand.class, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "brand_id")
+    private Brand brand;
 
     @Column(name = "type")
     private String type;
+
+    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
+    @JoinColumn(name = "beer_id")
+    private List<Message> messages;
 
 }
