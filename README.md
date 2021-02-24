@@ -1,4 +1,4 @@
-# graphql-example
+# graphql-demo
 
 ## Start docker for postgres
 ```
