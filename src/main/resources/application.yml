@@ -11,9 +11,20 @@ spring:
 
 graphql:
   servlet:
-    mapping: /v1/demo/graphql
+    mapping: /demo/graphql
     enabled: true
     corsEnabled: true
+
+graphiql:
+  mapping: /graphiql
+  endpoint:
+    graphql: /demo/graphql
+    subscriptions: /subscriptions
+  subscriptions:
+    reconnect: false
+    timeout: 30
+  enabled: true
+  pageTitle: GraphiQL
 
 server:
   port: 8099
