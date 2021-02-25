@@ -1,0 +1,4 @@
+type Subscription {
+    beer(id: Int): Beer
+    beers: [Beer]
+}
